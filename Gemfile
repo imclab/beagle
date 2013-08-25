@@ -14,3 +14,27 @@ end
 
 gem 'mongoid'
 gem 'delayed_job_mongoid'
+gem 'feedzirra', github: 'pauldix/feedzirra'
+
+
+group :development do
+  gem 'thin'
+  gem 'quiet_assets'
+  gem "guard-rspec"
+  gem "spork"
+  gem "guard-spork"
+  gem 'rb-fsevent'
+  gem "terminal-notifier-guard"
+  # gem 'rails-dev-tweaks', '~> 0.6.1'
+end
+
+group :test do 
+	gem "capybara"
+	gem "database_cleaner"
+	gem "mongoid-rspec"
+end 
+
+group :development, :test do 
+	gem "rspec-rails"
+	gem "factory_girl_rails"
+end 
